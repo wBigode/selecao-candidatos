@@ -62,3 +62,31 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Instalação do projeto
+
+Passo a passo para a execução do projeto feito com o Laravel em sua máquina Linux.
+
+1. Faça o clone do projeto em sua máquina com o Git.
+2. Na raiz do projeto, insira as informações de acesso do seu banco de dados **MySQL** no arquivo **.env**
+3. Execute o comando abaixo para instalar as dependências do composer
+
+```bash
+  composer update
+```
+4. Execute o comando abaixo, na raiz do projeto, para instalar e executar as dependências do npm 
+```bash
+npm install && npm run dev
+```
+5. Execute o comando abaixo, na raiz do projeto, criar o banco de dados e preenche-las com alguns registros necessários
+```bash
+php artisan migrate:fresh --seed
+```
+6. Por fim execute o comando abaixo, na raiz do projeto, para subir um servidor local em sua máquina
+```bash
+php artisan serve
+```
+Para executar o teste unitário básico de redirecionamento, execute o comendo abaixo
+```bash
+php artisan test
+```
